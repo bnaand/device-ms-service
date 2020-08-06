@@ -1,0 +1,14 @@
+server:
+  port: 8060
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: '*'

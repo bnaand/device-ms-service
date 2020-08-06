@@ -1,0 +1,32 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: device-ms-service
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: devices
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: '*'
+
+security:
+  oauth2:
+    client:
+      clientId: api-client
+      clientSecret: secret
+    resource:
+      tokenInfoUri: http://localhost:8060/oauth/check_token
+
+#mongodb.encrypt:
+#  keys:
+#    - version: 1
+#      key: hqHKBLV83LpCqzKpf8OvutbCs+O5wX5BPu3btWpEvXA=

@@ -1,0 +1,8 @@
+spring:
+
+  application:
+    name: device-ms-discovery-server
+
+  cloud:
+    config:
+      uri: http://localhost:6888

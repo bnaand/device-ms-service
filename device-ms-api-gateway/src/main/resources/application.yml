@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+
+zuul:
+  routes:
+    device-ms-service:
+      path: /api/**
+      url: http://localhost:8090
+    device-ms-auth-server:
+      path: /oauth/**
+      url: http://localhost:8060
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: '*'

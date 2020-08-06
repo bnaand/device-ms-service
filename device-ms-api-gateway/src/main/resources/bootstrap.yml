@@ -1,0 +1,8 @@
+spring:
+
+  application:
+    name: device-ms-api-gateway
+
+  cloud:
+    config:
+      uri: http://localhost:6888
